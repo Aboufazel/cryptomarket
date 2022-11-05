@@ -1,9 +1,10 @@
 
-import IndexLayout from "./components/Layout/IndexLayout";
+import Container from "./components/Container/Container";
+import Root from "./router/Root";
 
 function App() {
   return (
-       <IndexLayout/>
+         <Root/>
   );
 }
 

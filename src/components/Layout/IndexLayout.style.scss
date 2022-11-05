@@ -1,0 +1,16 @@
+.indexLayout{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  .bottom{
+    display: flex;
+    width: 100%;
+    .bottom_left{
+      width: 15%;
+    }
+    .bottom_right{
+      width: 85%;
+      padding: 12px 0 0 12px;
+    }
+  }
+}
