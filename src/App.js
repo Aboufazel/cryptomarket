@@ -1,10 +1,9 @@
-import './App.css';
-import SearchBox from "./components/SearchBox/SearchBox";
-import TopBar from "./components/TopBar/TopBar";
+
+import IndexLayout from "./components/Layout/IndexLayout";
 
 function App() {
   return (
-       <TopBar/>
+       <IndexLayout/>
   );
 }
 

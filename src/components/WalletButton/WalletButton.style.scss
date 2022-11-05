@@ -1,0 +1,19 @@
+.walletButton{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.42);
+  background: #0077FE;
+  border-radius: 15px;
+  width: 65%;
+  height: 35px;
+  margin: 25px 0 ;
+  &:hover{
+    background: white;
+    color: #0077FE;
+    box-shadow: 0 0 15px 3px rgba(218, 165, 32, 0.42);
+  }
+}
