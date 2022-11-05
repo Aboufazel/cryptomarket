@@ -1,0 +1,17 @@
+.mainIndex{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 0 0 35px;
+  .title{
+    h2{
+      color: orange;
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+    }
+  }
+  .card{
+    display: flex;
+    margin: 8px 0;
+    flex-direction: row;
+  }
+}
