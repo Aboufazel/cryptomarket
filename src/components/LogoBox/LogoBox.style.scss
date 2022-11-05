@@ -1,0 +1,18 @@
+.logoBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  margin: 0 40px 0 0;
+  .avatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 40px;
+      height: auto;
+      margin: 0 8px;
+    }
+  }
+
+}
