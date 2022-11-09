@@ -54,3 +54,71 @@
     }
   }
 }
+
+
+.main{
+  display: flex;
+  flex-direction: column;
+  margin: 40px 35px;
+}
+
+.secondCoinBox{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  width: 480px;
+  height: 80px;
+  padding: 0 0 20px 0;
+  .coinLogo{
+    width: 150px;
+    padding: 5px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    img{
+      width: 80px;
+    }
+  }
+  .coinInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: start;
+    height: 100%;
+    width: 80%;
+    h2{
+      margin: 3px 0 1px 0;
+    }
+    p{
+      color: lightgray;
+    }
+  }
+  .likeBox{
+    cursor: pointer;
+  }
+}
+
+.priceBox{
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 20px;
+  .priceInfo{
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+  h2{
+    font-size: 45px;
+  }
+  h4{
+    font-size: 35px;
+    color: lightgrey;
+  }
+  .volume{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    color: green;
+    font-size: 18px;
+  }
+}

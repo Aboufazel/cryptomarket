@@ -1,10 +1,18 @@
 
-import Container from "./components/Container/Container";
+
 import Root from "./router/Root";
+import GetCoinData from "./components/GetCoinData/GetCoinData";
+import SendApi from "./components/GetCoinData/SendApi";
+
+
 
 function App() {
   return (
-         <Root/>
+         <>
+           <Root/>
+           <GetCoinData/>
+             <SendApi/>
+         </>
   );
 }
 
