@@ -21,7 +21,7 @@ const Main = () => {
           <div className={'mainIndex'}>
               <div className={'title'}>
                   <h2>
-                      {'Top Coin'}
+                      {'Top Value Coin'}
                   </h2>
               </div>
               <div className={"card"}>
