@@ -1,9 +1,12 @@
 import Root from "./router/Root";
+import CoinContextProvider from "./components/Context/Context";
 
 
 function App() {
     return (
-        <Root/>
+        <CoinContextProvider>
+            <Root/>
+        </CoinContextProvider>
     );
 }
 

@@ -15,5 +15,9 @@
     padding: 0 0 10px 0;
     flex-direction: row;
     overflow-x: auto;
+    a{
+      text-decoration: none;
+      color: black;
+    }
   }
 }

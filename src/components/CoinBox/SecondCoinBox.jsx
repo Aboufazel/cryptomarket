@@ -4,20 +4,21 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart} from '@fortawesome/free-regular-svg-icons'
 import Container from "../Container/Container";
 
-const SecondCoinBox = () => {
+const SecondCoinBox = ({name , symbol , price , volume , pic , percent}) => {
+    console.log(percent)
   return(
        <Container>
            <div className={'main'}>
                <div className={'secondCoinBox'}>
                    <div className={'coinLogo'}>
-                       <img src={btc} alt={'btcLogo'}/>
+                       <img src={pic} alt={'coinicon'}/>
                    </div>
                    <div className={'coinInfo'}>
                        <h2>
-                           {'Bitcoin'}
+                           {name}
                        </h2>
                        <p>
-                           {'BTC / USD'}
+                           {`${symbol} / USDT`}
                        </p>
                    </div>
                    <div className={'likeBox'}>
@@ -26,15 +27,20 @@ const SecondCoinBox = () => {
                </div>
                <div className={'priceBox'}>
                     <div className={'priceInfo'}>
-                        <h4>
+                        <h4 className={percent > 0 ? "GreenPrice" : "RedPrice" }>
                             {'$'}
                         </h4>
-                        <h2>
-                            {'19870'}
-                        </h2>
+                        <h6 className={percent > 0 ? "GreenPrice" : "RedPrice" }>
+                            {price}
+                        </h6>
                     </div>
                    <div className={'volume'}>
-                       {'24h volume'}
+                       <p style={{color:"red"}}>
+                           {'MarketCap:'}
+                       </p>
+                       <p style={{color:"black"}}>
+                           {`${volume}USDT`}
+                       </p>
                    </div>
                </div>
                <div>

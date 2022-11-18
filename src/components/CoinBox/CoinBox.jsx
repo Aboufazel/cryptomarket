@@ -1,5 +1,5 @@
 import "./CoinBox.style.scss"
-
+import LOGO from '../../assets/pics/logo.png'
 import BTC from '../../assets/coinlogo/bitcoin-btc-logo.png';
 import ETH from '../../assets/coinlogo/ethereum-eth-logo.png';
 import USDT from '../../assets/coinlogo/tether-usdt-logo.png';
@@ -29,12 +29,12 @@ export const CoinSymbol = [
 ]
 
 
-const CoinBox = ({title , symbol , price , change}) => {
+const CoinBox = ({title , symbol , price , change ,pic}) => {
   return(
       <div className={'coinBox'}>
           <div className={'left'}>
               <div className={'logo'}>
-                  <img src={symbol == CoinSymbol.name ? CoinSymbol.pic : MATIC} alt={'cryptoLogo'}/>
+                  <img src={pic} alt={'cryptoLogo'}/>
               </div>
               <div className={'coinName'}>
                   <h5>

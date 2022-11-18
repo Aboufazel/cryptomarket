@@ -4,6 +4,7 @@ import LogoBox from "../LogoBox/LogoBox";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBell} from "@fortawesome/free-solid-svg-icons/faBell";
 import './TopBar.style.scss'
+import {Link} from "react-router-dom";
 
 
 
@@ -12,7 +13,9 @@ const TopBar = () => {
       <Container>
           <div className={'topBar'}>
               <div className={'leftSide'}>
-                  <LogoBox/>
+                  <Link to={"/"} style={{textDecoration:"none" , color:"black"}}>
+                      <LogoBox/>
+                  </Link>
                   <SearchBox/>
               </div>
               <div className={'rightSide'}>
