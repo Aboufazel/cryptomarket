@@ -1,10 +1,21 @@
 import Container from "../Container/Container";
 import './Main.style.scss'
 import CoinBox from "../CoinBox/CoinBox";
+import {useEffect, useState} from "react";
+import {manageCoinData} from "../../ApiServices/ApiServices";
 
 
 
 const Main = () => {
+    const [coins , setCoins] = useState([]);
+    const TopCoins = coins.slice(0 , 3);
+    const TopCoinsRow1 = coins.slice(4 , 7);
+    const TopCoinsRow2  = coins.slice(8 , 11);
+    const TopCoinsRow3  = coins.slice(12 , 15);
+
+    useEffect(()=>{
+        manageCoinData().then(res => setCoins(res));
+    } , [])
   return(
       <Container>
           <div className={'mainIndex'}>
@@ -14,9 +25,11 @@ const Main = () => {
                   </h2>
               </div>
               <div className={"card"}>
-                  <CoinBox/>
-                  <CoinBox/>
-                  <CoinBox/>
+                  {
+                      TopCoins.map(item =>(
+                          <CoinBox title={item.name} symbol={item.symbol} change={item.change} price={item.price}/>
+                      ))
+                  }
               </div>
               <div className={''} style={{color:"black"}}>
                   <h2>
@@ -24,19 +37,25 @@ const Main = () => {
                   </h2>
               </div>
               <div className={"card"}>
-                  <CoinBox/>
-                  <CoinBox/>
-                  <CoinBox/>
+                  {
+                      TopCoinsRow1.map(item =>(
+                          <CoinBox title={item.name} symbol={item.symbol} change={item.change} price={item.price}/>
+                      ))
+                  }
               </div>
               <div className={"card"}>
-                  <CoinBox/>
-                  <CoinBox/>
-                  <CoinBox/>
+                  {
+                      TopCoinsRow2.map(item =>(
+                          <CoinBox title={item.name} symbol={item.symbol} change={item.change} price={item.price}/>
+                      ))
+                  }
               </div>
               <div className={"card"}>
-                  <CoinBox/>
-                  <CoinBox/>
-                  <CoinBox/>
+                  {
+                      TopCoinsRow3.map(item =>(
+                          <CoinBox title={item.name} symbol={item.symbol} change={item.change} price={item.price}/>
+                      ))
+                  }
               </div>
           </div>
       </Container>

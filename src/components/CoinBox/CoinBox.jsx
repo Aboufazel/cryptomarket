@@ -1,7 +1,7 @@
 import btc from "../../assets/coinlogo/bitcoin-btc-logo.png";
 import "./CoinBox.style.scss"
 
-const CoinBox = () => {
+const CoinBox = ({title , symbol , price , change}) => {
   return(
       <div className={'coinBox'}>
           <div className={'left'}>
@@ -10,19 +10,21 @@ const CoinBox = () => {
               </div>
               <div className={'coinName'}>
                   <h5>
-                      {"Bitcoin"}
+                      {title}
                   </h5>
                   <p>
-                      {"BTC"}
+                      {symbol}
                   </p>
               </div>
           </div>
           <div className={'right'}>
-              <div className={'percent'}>
-                  {"12%"}
+              <div className={change > 0 ? 'greenPercent' : 'redPercent'}>
+                  {`${change}%`}
               </div>
               <div className={'price'}>
-                  {"21450$"}
+                 <p>
+                     {`${price} USDT`}
+                 </p>
               </div>
           </div>
       </div>
