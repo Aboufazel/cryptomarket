@@ -1,5 +1,5 @@
 import "./CoinBox.style.scss"
-import btc from "../../assets/coinlogo/bitcoin-btc-logo.png";
+import TradingViewWidget from 'react-tradingview-widget';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHeart} from '@fortawesome/free-regular-svg-icons'
 import Container from "../Container/Container";
@@ -47,9 +47,7 @@ const SecondCoinBox = ({name , symbol , price , volume , pic , percent}) => {
                    <h2>
                        {"Chart"}
                    </h2>
-                   <p>
-                       {"Chart is coming Soon"}
-                   </p>
+                   <TradingViewWidget  symbol="Binance:BTCUSDT"   range='10m'/>
                </div>
            </div>
        </Container>

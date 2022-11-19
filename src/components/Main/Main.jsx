@@ -92,7 +92,7 @@ const Main = () => {
                     <Skeleton sx={{marginRight: 5 , borderRadius:4}} variant="rectangular" width={360} height={85} animation={"wave"}/>
                     <Skeleton sx={{marginRight: 5 , borderRadius:4}} variant="rectangular" width={360} height={85} animation={"wave"}/>
                     <Skeleton sx={{marginRight: 5 , borderRadius:4}} variant="rectangular" width={360} height={85} animation={"wave"}/>
-                </div> : <div className={"card"}>
+                </div> : <div className={"card"} style={{paddingBottom:70}}>
                     {
                         TopCoinsRow3.map(item => (
                             <Link to={`coin/${item.name}`}>
