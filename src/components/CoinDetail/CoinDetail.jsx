@@ -31,7 +31,7 @@ const CoinDetail = () => {
 
    try {
        return(
-           loading ? <CircularProgress color={"warning}/> :<Container>
+           loading ? <CircularProgress color={"warning"}/> :<Container>
                {
                    coins.map(item => (
                        <div className={'CoinDetailHeader'}>
