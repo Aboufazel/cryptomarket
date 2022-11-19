@@ -88,7 +88,7 @@ const Main = () => {
                         ))
                     }
                 </div>}
-                {loading ? <div className={"card"}>
+                {loading ? <div className={"card"}  style={{paddingBottom:110}}>
                     <Skeleton sx={{marginRight: 5 , borderRadius:4}} variant="rectangular" width={360} height={85} animation={"wave"}/>
                     <Skeleton sx={{marginRight: 5 , borderRadius:4}} variant="rectangular" width={360} height={85} animation={"wave"}/>
                     <Skeleton sx={{marginRight: 5 , borderRadius:4}} variant="rectangular" width={360} height={85} animation={"wave"}/>
