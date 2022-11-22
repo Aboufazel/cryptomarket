@@ -9,12 +9,17 @@ import Skeleton from "@mui/material/Skeleton";
 
 const SecondCoinBox = ({name, symbol, price, volume, pic, percent}) => {
     const [loading, setLoading] = useState(true);
-
+    const [like , setLike] = useState("black")
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
         }, 6000)
-    }, [])
+    }, []);
+
+
+    const manageLike = () =>{
+        like === "black" ? setLike("red") : setLike("black")
+    }
 
     console.log(percent)
     return (
@@ -32,8 +37,8 @@ const SecondCoinBox = ({name, symbol, price, volume, pic, percent}) => {
                             {`${symbol} / USDT`}
                         </p>
                     </div>
-                    <div className={'likeBox'}>
-                        <FontAwesomeIcon icon={faHeart}/>
+                    <div className={'likeBox'} onClick={manageLike}>
+                        <FontAwesomeIcon style={{color:like , padding:12 , borderRadius:50}} icon={faHeart}/>
                     </div>
                 </div>
                 <div className={'priceBox'}>
@@ -50,7 +55,10 @@ const SecondCoinBox = ({name, symbol, price, volume, pic, percent}) => {
                             {'MarketCap:'}
                         </p>
                         <p style={{color: "black"}}>
-                            {`${volume}USDT`}
+                            {`${volume}`}
+                            <span style={{color:"green" , paddingLeft:5 , fontSize:18}}>
+                                {'$'}
+                            </span>
                         </p>
                     </div>
                 </div>

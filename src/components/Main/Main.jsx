@@ -20,7 +20,10 @@ const Main = () => {
 
 
     useEffect(() => {
-        manageCoinData().then(res => setCoins(res));
+        manageCoinData().then(res => {
+            console.log(res)
+            setCoins(res)
+        });
 
         setTimeout(() => {
             setLoading(false)
